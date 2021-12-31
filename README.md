@@ -24,11 +24,27 @@ Gooreplacer 规则，请搭配浏览器插件 [Gooreplacer](https://github.com/j
 
 本 repo 维护两个规则列表，请根据设备选择要导入的在线规则：
 
-* 桌面端 (desktop.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/main/desktop.json)、[jsDelivr](https://cdn.jsdelivr.net/gh/Lehmaning/nonstop/desktop.json)
-* 移动端 (mobile.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/main/mobile.json)、[jsDelivr](https://cdn.jsdelivr.net/gh/Lehmaning/nonstop/mobile.json)
+* 桌面端 (desktop.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/master/desktop.json)、[jsDelivr](https://cdn.jsdelivr.net/gh/Lehmaning/nonstop/desktop.json)
+* 移动端 (mobile.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/master/mobile.json)、[jsDelivr](https://cdn.jsdelivr.net/gh/Lehmaning/nonstop/mobile.json)
 
 注意：**两个规则可能不会同步更改。**
 
 ### 本地导入
-
 下载[压缩包](https://github.com/Lehmaning/nonstop/archive/refs/heads/main.zip)，在 Gooreplacer 页面中导入即可。
+
+## 本地构建
+### 依赖
+* nodejs
+    * fs
+    * path
+
+### 生成
+```shell
+git clone https://github.com/Lehmaning/nonstop.git
+cd nonstop
+node src/merge.js
+```
+
+## 其它
+推荐同时使用浏览器扩展 [ClearUrls](https://github.com/ClearURLs/Addon)，处理网页跳转链接的规则表现更灵活，甚至可以直接清理页面内的链接。
+对应的规则正在收集中。
