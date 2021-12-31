@@ -3,31 +3,31 @@
         {
             "src": "//qastack.*/superuser/",
             "kind": "wildcard",
-            "dst": "https://superuser.com/questions/",
+            "dst": "//superuser.com/questions/",
             "enable": true
         },
         {
             "src": "//qastack.*/ubuntu/",
             "kind": "wildcard",
-            "dst": "https://askubuntu.com/questions/",
+            "dst": "//askubuntu.com/questions/",
             "enable": true
         },
         {
             "src": "//qastack.*/server/",
             "kind": "wildcard",
-            "dst": "https://serverfault.com/questions/",
+            "dst": "//serverfault.com/questions/",
             "enable": true
         },
         {
             "src": "//qastack.*/programming/",
             "kind": "wildcard",
-            "dst": "https://stackoverflow.com/questions/",
+            "dst": "//stackoverflow.com/questions/",
             "enable": true
         },
         {
             "src": "\/\/qastack\\..{2,3}\/(\\w*)\/",
             "kind": "wildcard",
-            "dst": "https://$1.stackexchange.com/questions/",
+            "dst": "//$1.stackexchange.com/questions/",
             "enable": true
         }
     ]
