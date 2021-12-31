@@ -1,0 +1,16 @@
+{
+    "redirect-rules": [
+        {
+            "src": "//zh.moegirl.org.cn",
+            "kind": "wildcard",
+            "dst": "//mzh.moegirl.org.cn",
+            "enable": true
+          },
+          {
+            "src": "(?:jump2\\.bdimg\\.com|wefan\\.baidu\\.com|www\\.tieba\\.com|c\\.tieba\\.baidu\\.com)\/p\/(\\d+)",
+            "kind": "regexp",
+            "dst": "https://byokpg.smartapps.cn/pages/pb/pb?tid=$1",
+            "enable": true
+          }
+    ]
+}

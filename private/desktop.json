@@ -1,0 +1,10 @@
+{
+    "redirect-rules": [
+        {
+            "src": "(?:jump2\\.bdimg\\.com|wefan\\.baidu\\.com|www\\.tieba\\.com|c\\.tieba\\.baidu\\.com)",
+            "kind": "regexp",
+            "dst": "tieba.baidu.com",
+            "enable": true
+          }
+    ]
+}
