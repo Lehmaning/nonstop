@@ -7,7 +7,7 @@
             "enable": true
           },
           {
-            "src": "^https://link.*.*/\\?target=http%3A%2F%2F",
+            "src": "^https://link.*.*/\\?target=http(?:%3A|:)(?:%2F%2F|\/\/)",
             "kind": "wildcard",
             "dst": "http://",
             "enable": true
