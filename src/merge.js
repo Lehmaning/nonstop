@@ -27,11 +27,12 @@ function build() {
     let mobileData = outputData;
     desktopData = updateRule(e('desktop'), desktopData);
     mobileData = updateRule(e('mobile'), mobileData);
-    fs.writeFile(destFilesLocation + '/desktop.json', JSON.stringify(desktopData), err => {if(err) return console.log(err)
-        console.log("The desktop rules file saved!");
+    
+    let write = (end, data) =>
+     fs.writeFile(destFilesLocation + '/' + end + '.json', JSON.stringify(data), err => {if(err) return console.log(err)
+        console.log("The", end, "rules file saved!");
     });
-    fs.writeFile(destFilesLocation + '/mobile.json', JSON.stringify(mobileData), err => {if(err) return console.log(err)
-        console.log("The mobile rules file saved!");
-    });
+    write("desktop", desktopData);
+    write("mobile", mobileData);
 }
 build();
