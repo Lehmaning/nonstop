@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "name": "nonstop",
+  "description": "## 规则介绍",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lehmaning/nonstop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lehmaning/nonstop/issues"
+  },
+  "homepage": "https://github.com/Lehmaning/nonstop#readme"
+}
