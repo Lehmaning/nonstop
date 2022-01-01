@@ -31,7 +31,7 @@ function build() {
     });
     // write("desktop", desktopData);
     // write("mobile", mobileData);
-    write("desktop", updateRule(e('desktop'), outputData));
-    write("mobile", updateRule(e('mobile'), outputData));
+    write("desktop", updateRule(e('desktop'), JSON.parse(JSON.stringify(outputData))));
+    write("mobile", updateRule(e('mobile'), JSON.parse(JSON.stringify(outputData))));
 }
 build();

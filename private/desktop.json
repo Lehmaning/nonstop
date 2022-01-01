@@ -5,6 +5,18 @@
             "kind": "regexp",
             "dst": "tieba.baidu.com",
             "enable": true
-          }
+        },
+        {
+            "src": "//mzh.moegirl.org.cn",
+            "kind": "wildcard",
+            "dst": "//zh.moegirl.org.cn",
+            "enable": true
+        },
+        {
+            "src": "//m.mediawiki.org",
+            "kind": "wildcard",
+            "dst": "//mediawiki.org",
+            "enable": true
+        }
     ]
 }
