@@ -7,8 +7,7 @@ const destFilesLocation = path.resolve(__dirname + '/../');
 function* ruleFileRead(location) {
     var ruleFilesList = fs.readdirSync(location);
     for(let i of ruleFilesList) {
-        let file = fs.readFileSync(path.resolve(location + '/' + i)).toString();
-        yield file;
+        yield file = fs.readFileSync(path.resolve(location + '/' + i)).toString();
     }
 }
 function updateRule(input, output=[]) {
@@ -18,21 +17,21 @@ function updateRule(input, output=[]) {
 }
 
 function build() {
-    var outputData = {"redirect-rules":[],"cancel-rules":[],"request-headers": [],"response-headers": []};
+    let outputData = {"redirect-rules":[],"cancel-rules":[],"request-headers": [],"response-headers": []};
+    //let mobileData = JSON.parse(JSON.stringify(desktopData))
     for(let i of ruleFileRead(pubRuleLocation)) {
         outputData = updateRule(i, outputData);
     }
     let e = end => fs.readFileSync(path.resolve(priRuleLocation + '/' + end + ".json"));
-    let desktopData = outputData;
-    let mobileData = outputData;
-    desktopData = updateRule(e('desktop'), desktopData);
-    mobileData = updateRule(e('mobile'), mobileData);
+    // let desktopData, mobileData;
     
     let write = (end, data) =>
      fs.writeFile(destFilesLocation + '/' + end + '.json', JSON.stringify(data), err => {if(err) return console.log(err)
         console.log("The", end, "rules file saved!");
     });
-    write("desktop", desktopData);
-    write("mobile", mobileData);
+    // write("desktop", desktopData);
+    // write("mobile", mobileData);
+    write("desktop", updateRule(e('desktop'), outputData));
+    write("mobile", updateRule(e('mobile'), outputData));
 }
 build();

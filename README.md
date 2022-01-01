@@ -46,6 +46,7 @@ npm install
 node src/merge.js
 ```
 
-## 其它同类型扩展
+## 其它同类型扩展以及规则
 * [ClearUrls](https://github.com/ClearURLs/Addon)：处理网页跳转链接的规则表现更灵活，甚至可以直接清理页面内的链接。<br/>
 对应的规则正在收集中。
+    * [lifegpc/clearUrls](https://github.com/lifegpc/clearUrls)：增强针对中文网站的 URL 清理规则。

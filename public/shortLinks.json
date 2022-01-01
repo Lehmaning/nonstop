@@ -25,7 +25,7 @@
             "enable": false
         },
         {
-            "src": "//(?:acg\\.tv|b23\\.tv|b23\\.wtf|bili2233\\.cn)/av",
+            "src": "\/\/(?:acg\\.tv|b23\\.tv|b23\\.wtf|bili2233\\.cn)\/av",
             "kind": "regexp",
             "dst": "//www.bilibili.com/video/av",
             "enable": true

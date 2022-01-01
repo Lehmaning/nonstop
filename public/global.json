@@ -1,9 +1,9 @@
 {
     "redirect-rules": [
         {
-            "src": "[^/(:?%2F)]%2F$",
+            "src": "([^/(:?%2F)])%2F$",
             "kind": "regexp",
-            "dst": "/",
+            "dst": "$1/",
             "enable": true
           }
     ],

@@ -1,7 +1,7 @@
 {
     "redirect-rules": [
         {
-            "src": "^https:\/\/link\\..*\\..*/\\?target=http(?:%3A|:)(?:%2F%2F|\/\/)",
+            "src": "^https:\/\/link\\..*\\..*/\\?target=https(?:%3A|:)(?:%2F%2F|\/\/)",
             "kind": "regexp",
             "dst": "https://",
             "enable": true
@@ -44,6 +44,18 @@
           },
           {
             "src": "^https://link.jianshu.com/\\?t=http%3A%2F%2F",
+            "kind": "wildcard",
+            "dst": "http://",
+            "enable": true
+          },
+          {
+            "src": "^https://links.jianshu.com/go\\?to=https%3A%2F%2F",
+            "kind": "wildcard",
+            "dst": "https://",
+            "enable": true
+          },
+          {
+            "src": "^https://links.jianshu.com/go\\?to=http%3A%2F%2F",
             "kind": "wildcard",
             "dst": "http://",
             "enable": true
