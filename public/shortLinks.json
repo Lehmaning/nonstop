@@ -1,9 +1,39 @@
 {
     "redirect-rules": [
         {
-            "src": "//(:?acg\\.tv|b23\\.tv|b23\\.wtf|bili2233\\.cn)/av",
+            "src": "\/\/(\w{2,3}\\.\w{2,3})\/",
+            "kind": "regexp",
+            "dst": "//unshort.link/$1",
+            "enable": false
+        },
+        {
+            "src": "//discord.gg",
             "kind": "wildcard",
+            "dst": "//discord.com/invite",
+            "enable": true
+        },
+        {
+            "src": "\/\/youtu\\.be\/(.{11})",
+            "kind": "regexp",
+            "dst": "//www.youtube.com/watch?v=$1",
+            "enable": true
+        },
+        {
+            "src": "\/\/youtu\\.be\/",
+            "kind": "regexp",
+            "dst": "//invidious.snopyta.org/",
+            "enable": false
+        },
+        {
+            "src": "//(?:acg\\.tv|b23\\.tv|b23\\.wtf|bili2233\\.cn)/av",
+            "kind": "regexp",
             "dst": "//www.bilibili.com/video/av",
+            "enable": true
+        },
+        {
+            "src": "//b23.tv/BV",
+            "kind": "wildcard",
+            "dst": "//www.bilibili.com/video/BV",
             "enable": true
         },
         {
@@ -19,15 +49,9 @@
             "enable": true
         },
         {
-            "src": "//nico.ms/sm",
-            "kind": "wildcard",
+            "src": "\/\/(?:nico\\.ms|acg\\.tv)\/sm",
+            "kind": "regexp",
             "dst": "//www.nicovideo.jp/watch/sm",
-            "enable": true
-        },
-        {
-            "src": "//nico.ms/nm",
-            "kind": "wildcard",
-            "dst": "//www.nicovideo.jp/watch/nm",
             "enable": true
         },
         {

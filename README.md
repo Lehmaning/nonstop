@@ -42,9 +42,10 @@ Gooreplacer 规则，请搭配浏览器插件 [Gooreplacer](https://github.com/j
 ```shell
 git clone https://github.com/Lehmaning/nonstop.git
 cd nonstop
+npm install
 node src/merge.js
 ```
 
-## 其它
-推荐同时使用浏览器扩展 [ClearUrls](https://github.com/ClearURLs/Addon)，处理网页跳转链接的规则表现更灵活，甚至可以直接清理页面内的链接。
+## 其它同类型扩展
+* [ClearUrls](https://github.com/ClearURLs/Addon)：处理网页跳转链接的规则表现更灵活，甚至可以直接清理页面内的链接。<br/>
 对应的规则正在收集中。
