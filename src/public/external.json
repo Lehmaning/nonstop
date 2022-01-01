@@ -1,0 +1,88 @@
+{
+    "redirect-rules": [
+        {
+            "src": "^https:\/\/link\\..*\\..*/\\?target=https(?:%3A|:)(?:%2F%2F|\/\/)",
+            "kind": "regexp",
+            "dst": "https://",
+            "enable": true
+          },
+          {
+            "src": "^https:\/\/link\\..*\\..*/\\?target=http(?:%3A|:)(?:%2F%2F|\/\/)",
+            "kind": "regexp",
+            "dst": "http://",
+            "enable": true
+          },
+          {
+            "src": "^https://mail.qq.com/cgi-bin/*\\?*=*&gourl=http%3A%2F%2F",
+            "kind": "wildcard",
+            "dst": "http://",
+            "enable": true
+          },
+          {
+            "src": "^https://mail.qq.com/cgi-bin/*\\?*=*&gourl=https%3A%2F%2F",
+            "kind": "wildcard",
+            "dst": "https://",
+            "enable": true
+          },
+          {
+            "src": "https:\/\/www\\.jianshu\\.com\/go-wild\\?ac=\\d+\\&url=https%3A%2F%2F(.*)(:?%2F)?",
+            "kind": "regexp",
+            "dst": "https://$1",
+            "enable": true
+          },
+          {
+            "src": "https:\/\/www\\.jianshu\\.com\/go-wild\\?ac=\\d+\\&url=http%3A%2F%2F(.*)(:?%2F)?",
+            "kind": "regexp",
+            "dst": "http://$1",
+            "enable": true
+          },
+          {
+            "src": "^https://link.jianshu.com/\\?t=https%3A%2F%2F",
+            "kind": "wildcard",
+            "dst": "https://",
+            "enable": true
+          },
+          {
+            "src": "^https://link.jianshu.com/\\?t=http%3A%2F%2F",
+            "kind": "wildcard",
+            "dst": "http://",
+            "enable": true
+          },
+          {
+            "src": "^https://links.jianshu.com/go\\?to=https%3A%2F%2F",
+            "kind": "wildcard",
+            "dst": "https://",
+            "enable": true
+          },
+          {
+            "src": "^https://links.jianshu.com/go\\?to=http%3A%2F%2F",
+            "kind": "wildcard",
+            "dst": "http://",
+            "enable": true
+          },
+          {
+            "src": "^https://www.deviantart.com/users/outgoing\\?http",
+            "kind": "wildcard",
+            "dst": "http",
+            "enable": true
+          },
+          {
+            "src": "^https://www.youtube.com/redirect\\?event=*&redir_token=*&q=https\\?%3A%2F%2F",
+            "kind": "wildcard",
+            "dst": "https://",
+            "enable": true
+          },
+          {
+            "src": "^https://www.youtube.com/redirect\\?event=*&redir_token=*&q=http\\?%3A%2F%2F",
+            "kind": "wildcard",
+            "dst": "http://",
+            "enable": true
+          },
+          {
+            "src": "https?:\/\/bbs\\.[a-zA-Z]{3,4}\\.edu\\.cn\/v\\d\/jump-to\\.php\\?url=http(s)?:\/\/(.*)&(:?from_mobile_temp=\\d)?",
+            "kind": "regexp",
+            "dst": "http$1://$2",
+            "enable": true
+          }
+    ]
+}

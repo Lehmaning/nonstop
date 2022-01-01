@@ -1,0 +1,13 @@
+{
+    "redirect-rules": [
+        {
+            "src": "([^/(:?%2F)])%2F$",
+            "kind": "regexp",
+            "dst": "$1/",
+            "enable": true
+          }
+    ],
+    "cancel-rules": [],
+    "request-headers": [],
+    "response-headers": []
+}

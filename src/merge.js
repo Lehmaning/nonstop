@@ -1,8 +1,9 @@
 let fs = require('fs');
 let path = require('path');
-const pubRuleLocation = path.resolve(__dirname + '/../public/');
-const priRuleLocation = path.resolve(__dirname + '/../private/');
-const destFilesLocation = path.resolve(__dirname + '/../');
+let pubRuleLocation = path.resolve(__dirname + '/public/');
+let priRuleLocation = path.resolve(__dirname + '/private/');
+let destFilesLocation = file => path.resolve(__dirname + `/../${file}`);
+let buildFilesLocation = file => path.resolve(__dirname + `/../build/${file}`)
 
 function* ruleFileRead(location) {
     var ruleFilesList = fs.readdirSync(location);
@@ -23,15 +24,16 @@ function build() {
         outputData = updateRule(i, outputData);
     }
     let e = end => fs.readFileSync(path.resolve(priRuleLocation + '/' + end + ".json"));
-    // let desktopData, mobileData;
+    let desktopData = updateRule(e('desktop'), JSON.parse(JSON.stringify(outputData)))
+    let mobileData = updateRule(e('mobile'), JSON.parse(JSON.stringify(outputData)));
     
-    let write = (end, data) =>
-     fs.writeFile(destFilesLocation + '/' + end + '.json', JSON.stringify(data), err => {if(err) return console.log(err)
-        console.log("The", end, "rules file saved!");
+    let write = (end, data) => fs.writeFileSync(destFilesLocation(end + '.json'), JSON.stringify(data), err => {if(err) return console.log(err)});
+    let copy = end => fs.copyFile(destFilesLocation(end + '.json'), buildFilesLocation(end + '.gson'), err => {if(err) return console.log(err)
+        console.log("The", end, "rule saved!");
     });
-    // write("desktop", desktopData);
-    // write("mobile", mobileData);
-    write("desktop", updateRule(e('desktop'), JSON.parse(JSON.stringify(outputData))));
-    write("mobile", updateRule(e('mobile'), JSON.parse(JSON.stringify(outputData))));
+    write("desktop", desktopData);
+    write("mobile", mobileData);
+    copy("desktop");
+    copy("mobile");
 }
 build();
