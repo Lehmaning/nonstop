@@ -1,11 +1,7 @@
 {
     "redirect-rules": [
         {
-<<<<<<< HEAD
             "src": "\/\/(\\w{2,3}\\.\\w{2,3})\/",
-=======
-            "src": "\/\/(\w{2,3}\\.\\w{2,3})\/",
->>>>>>> ea81cc1 (Merge changes)
             "kind": "regexp",
             "dst": "//unshort.link/$1",
             "enable": false
