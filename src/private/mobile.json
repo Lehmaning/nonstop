@@ -19,6 +19,12 @@
             "enable": true
           },
           {
+            "src": "//*.cnbeta.com/articles/*/",
+            "kind": "wildcard",
+            "dst": "//m.cnbeta.com/view",
+            "enable": true
+          },
+          {
             "src": "//mediawiki.org",
             "kind": "wildcard",
             "dst": "//m.mediawiki.org",

@@ -47,9 +47,9 @@ node src/merge.js
 ```
 
 ## 其它同类型扩展以及规则
-* [keqingrong/static-files-host](https://github.com/keqingrong/static-files-host)：重定向谷歌静态资源及部分网站到官方镜像的 Gooreplacer 规则。
-* [Teddy-Zhu/gooreplacerRule](https://github.com/Teddy-Zhu/gooreplacerRule)：重定向谷歌静态资源到极客族加速服务的旧版 Gooreplacer 规则。
+* [keqingrong/static-files-host](https://github.com/keqingrong/static-files-host)<br/>重定向谷歌静态资源及部分网站到官方镜像的 Gooreplacer 规则。
+* [Teddy-Zhu/gooreplacerRule](https://github.com/Teddy-Zhu/gooreplacerRule)<br/>重定向谷歌静态资源到极客族加速服务的旧版 Gooreplacer 规则。
 
-* [ClearUrls](https://github.com/ClearURLs/Addon)：一个清理网页中 URL 的扩展，处理网页跳转链接的规则表现更灵活，甚至可以直接清理页面内的链接。<br/>
+* [ClearUrls](https://github.com/ClearURLs/Addon)<br/>一个清理网页中 URL 的扩展，处理网页跳转链接的规则表现更灵活，甚至可以直接清理页面内的链接。<br/>
 对应的规则正在收集中。
-    * [lifegpc/clearUrls](https://github.com/lifegpc/clearUrls)：针对中文网站的 ClearUrls 扩展规则。
+    * [lifegpc/clearUrls](https://github.com/lifegpc/clearUrls)<br/>针对中文网站的 ClearUrls 扩展规则。
