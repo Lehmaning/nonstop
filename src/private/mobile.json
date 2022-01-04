@@ -19,7 +19,7 @@
             "enable": true
           },
           {
-            "src": "//*.cnbeta.com/articles/*/",
+            "src": "//*.cnbeta.com/articles/*",
             "kind": "wildcard",
             "dst": "//m.cnbeta.com/view",
             "enable": true

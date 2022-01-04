@@ -19,18 +19,27 @@ function updateRule(input, output=[]) {
 
 function build() {
     let outputData = {"redirect-rules":[],"cancel-rules":[],"request-headers": [],"response-headers": []};
-    //let mobileData = JSON.parse(JSON.stringify(desktopData))
     for(let i of ruleFileRead(pubRuleLocation)) {
         outputData = updateRule(i, outputData);
     }
-    let e = end => fs.readFileSync(path.resolve(priRuleLocation + '/' + end + ".json"));
-    let desktopData = updateRule(e('desktop'), JSON.parse(JSON.stringify(outputData)))
-    let mobileData = updateRule(e('mobile'), JSON.parse(JSON.stringify(outputData)));
+    let e = end => 
+				fs.readFileSync(path.resolve(priRuleLocation + '/' + end + ".json"));
+    let desktopData = updateRule(e('desktop'),
+						JSON.parse(JSON.stringify(outputData)))
+    let mobileData = updateRule(e('mobile'),
+						JSON.parse(JSON.stringify(outputData)));
     
-    let write = (end, data) => fs.writeFileSync(destFilesLocation(end + '.json'), JSON.stringify(data), err => {if(err) return console.log(err)});
-    let copy = end => fs.copyFile(destFilesLocation(end + '.json'), buildFilesLocation(end + '.gson'), err => {if(err) return console.log(err)
+    let write = (end, data) => 
+				fs.writeFileSync(destFilesLocation(end + '.json'),
+								JSON.stringify(data), err => 
+								{if(err) return console.log(err)});
+    let copy = end => 
+				fs.copyFile(destFilesLocation(end + '.json'),
+								buildFilesLocation(end + '.gson'), err => 
+								{if(err) return console.log(err)
         console.log("The", end, "rule saved!");
     });
+
     write("desktop", desktopData);
     write("mobile", mobileData);
     copy("desktop");
