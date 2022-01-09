@@ -13,6 +13,12 @@
             "enable": true
           },
           {
+            "src": "zhihu\\.com\/oia\/(answer|question)s\/(\\d+)\\?.*",
+            "kind": "regexp",
+            "dst": "zhihu.com/$1/$2",
+            "enable": true
+          },
+          {
             "src": "//zh.moegirl.org.cn",
             "kind": "wildcard",
             "dst": "//mzh.moegirl.org.cn",
@@ -25,7 +31,7 @@
             "enable": true
           },
           {
-            "src": "//mediawiki.org",
+            "src": "//www.mediawiki.org",
             "kind": "wildcard",
             "dst": "//m.mediawiki.org",
             "enable": true
