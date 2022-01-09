@@ -59,9 +59,14 @@
             "kind": "wildcard",
             "dst": "http://",
             "enable": true
+          },{
+            "src": "^https?://www.360doc.(cn|com)/outlink.html\\?url=http",
+            "kind": "wildcard",
+            "dst": "http",
+            "enable": true
           },
           {
-            "src": "^https://www.deviantart.com/users/outgoing\\?http",
+            "src": "^https//www.deviantart.com/users/outgoing\\?http",
             "kind": "wildcard",
             "dst": "http",
             "enable": true

@@ -27,11 +27,11 @@ Gooreplacer 规则，请搭配浏览器插件 [Gooreplacer](https://github.com/j
 * 桌面端 (desktop.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/master/desktop.json)、[jsDelivr](https://cdn.jsdelivr.net/gh/Lehmaning/nonstop/desktop.json)
 * 移动端 (mobile.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/master/mobile.json)、[jsDelivr](https://cdn.jsdelivr.net/gh/Lehmaning/nonstop/mobile.json)
 
-注意：**两个规则可能不会同步更改。**
-<!--
 ### 本地导入
-在 [Release](https://github.com/Lehmaning/nonstop/archive/refs/heads/main.zip)，并解压缩，在 Gooreplacer 页面中导入解压出来的 gson 文件即可。
--->
+1. 在 [Release](https://github.com/Lehmaning/nonstop/archive/refs/heads/main.zip)，并解压缩，在 Gooreplacer 页面中导入解压出来的 gson 文件即可。
+注意：release 页面下的文件不会及时更新。
+2. 下载在线规则，将后缀名改为 ```.gson``` 后导入即可。
+
 ## 本地构建
 ### 依赖
 * nodejs
@@ -46,10 +46,15 @@ npm install
 node src/merge.js
 ```
 
+你可以用如下命令对 URL 进行测试：
+```shell
+node src/sandbox.js <desktop.json / mobile.json> <source URL>
+```
+
 ## 其它同类型扩展以及规则
 * [keqingrong/static-files-host](https://github.com/keqingrong/static-files-host)<br/>重定向谷歌静态资源及部分网站到官方镜像的 Gooreplacer 规则。
 * [Teddy-Zhu/gooreplacerRule](https://github.com/Teddy-Zhu/gooreplacerRule)<br/>重定向谷歌静态资源到极客族加速服务的旧版 Gooreplacer 规则。
-
+* [OldPanda/Open-the-F-king-URL-Right-Now](https://github.com/OldPanda/Open-the-F-king-URL-Right-Now)：去除手动跳转的油猴脚本。
 * [ClearUrls](https://github.com/ClearURLs/Addon)<br/>一个清理网页中 URL 的扩展，处理网页跳转链接的规则表现更灵活，甚至可以直接清理页面内的链接。<br/>
 对应的规则正在收集中。
     * [lifegpc/clearUrls](https://github.com/lifegpc/clearUrls)<br/>针对中文网站的 ClearUrls 扩展规则。

@@ -1,5 +1,6 @@
 let fs = require('fs');
 let path = require('path');
+/*try {let colors = require('colors');} catch {}*/
 let ruleName = process.argv.slice(2)[0];
 const testURL = process.argv.slice(2)[1];
 const ruleLocation = path.resolve(__dirname + '/../' + ruleName);
@@ -22,8 +23,8 @@ function test(input) {
         beforeURL = resultURL;
         resultURL = beforeURL.replace(srcURL, dstURL);
         if(resultURL == beforeURL) continue;
-        console.log(srcURL.toString(), '->', dstURL);
-        console.log(resultURL);
+        console.log('\n' + srcURL.toString(), '->', dstURL);
+        console.log('The result URL is:', resultURL + '\n');
     }
 }
 test(testURL);
