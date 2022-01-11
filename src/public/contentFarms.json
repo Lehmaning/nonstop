@@ -29,6 +29,18 @@
             "kind": "wildcard",
             "dst": "//$1.stackexchange.com/questions/",
             "enable": true
+        },
+        {
+            "src": "//*.softwareuser.asklobster.com/posts/",
+            "kind": "wildcard",
+            "dst": "//superuser.com/questions/",
+            "enable": true
+        },
+        {
+            "src": "\/\/.{2,3}\\.(\\w*)\\.asklobster\\.com\/posts\/",
+            "kind": "regexp",
+            "dst": "//$1.stackexchange.com/questions/",
+            "enable": true
         }
     ]
 }

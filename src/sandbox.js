@@ -3,7 +3,7 @@ let path = require('path');
 /*try {let colors = require('colors');} catch {}*/
 let ruleName = process.argv.slice(2)[0];
 const testURL = process.argv.slice(2)[1];
-const ruleLocation = path.resolve(__dirname + '/../' + ruleName);
+const ruleLocation = path.resolve(__dirname + '/../' + ruleName + ".json");
 let ruleFile = fs.readFileSync(ruleLocation).toString();
 let data = JSON.parse(ruleFile);
 

@@ -22,7 +22,7 @@
             "src": "//zh.moegirl.org.cn",
             "kind": "wildcard",
             "dst": "//mzh.moegirl.org.cn",
-            "enable": true
+            "enable": false
           },
           {
             "src": "//*.cnbeta.com/articles/*/",
@@ -34,7 +34,7 @@
             "src": "//www.mediawiki.org",
             "kind": "wildcard",
             "dst": "//m.mediawiki.org",
-            "enable": true
+            "enable": false
         }
     ]
 }
