@@ -26,7 +26,7 @@
         },
         {
             "src": "\/\/qastack\\..{2,3}\/(\\w*)\/",
-            "kind": "wildcard",
+            "kind": "regexp",
             "dst": "//$1.stackexchange.com/questions/",
             "enable": true
         },
@@ -40,6 +40,12 @@
             "src": "\/\/.{2,3}\\.(\\w*)\\.asklobster\\.com\/posts\/",
             "kind": "regexp",
             "dst": "//$1.stackexchange.com/questions/",
+            "enable": true
+        },
+        {
+            "src": "\/\/.{2,3}\\.handyradar\\.org\/(\\d+)-.*",
+            "kind": "regexp",
+            "dst": "//askubuntu.com/questions/$1",
             "enable": true
         }
     ]

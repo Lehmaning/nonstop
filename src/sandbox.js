@@ -24,7 +24,7 @@ function test(input) {
         resultURL = beforeURL.replace(srcURL, dstURL);
         if(resultURL == beforeURL) continue;
         console.log('\n' + srcURL.toString(), '->', dstURL);
-        console.log('The result URL is:', resultURL + '\n');
+        console.log('The result URL is:', resultURL);
     }
 }
 test(testURL);
