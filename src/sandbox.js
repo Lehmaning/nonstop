@@ -17,13 +17,14 @@ function test(input) {
     let resultURL = input, beforeURL;
     for(let rule of getRule(data)) {
         let srcURL = new RegExp(rule['kind'] == 'wildcard' 
-                    ? rule['src'].replace('.', '\\.').replace('*', '.*').replace('/', '\\/') 
+                    ? rule['src'].replace('\.', '\\.').replace('*', '(.*)').replace('/', '\\/') 
                     : rule['src']);
         let dstURL = rule['dst'];
         beforeURL = resultURL;
         resultURL = beforeURL.replace(srcURL, dstURL);
         if(resultURL == beforeURL) continue;
-        console.log('\n' + srcURL.toString(), '->', dstURL);
+        console.log('\n' + rule['src'].toString(), '->', dstURL);
+        /* console.log('\n' + srcURL.toString(), '->', dstURL); */
         console.log('The result URL is:', resultURL);
     }
 }

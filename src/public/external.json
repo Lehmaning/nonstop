@@ -13,78 +13,49 @@
             "enable": true
           },
           {
-            "src": "^https://mail.qq.com/cgi-bin/*\\?*=*&gourl=http%3A%2F%2F",
+            "src": "^https://mail.qq.com/cgi-bin/*\\?*=*&gourl=http(s?)%3A%2F%2F",
             "kind": "wildcard",
-            "dst": "http://",
+            "dst": "http$1://",
             "enable": true
           },
           {
-            "src": "^https://mail.qq.com/cgi-bin/*\\?*=*&gourl=https%3A%2F%2F",
-            "kind": "wildcard",
-            "dst": "https://",
-            "enable": true
-          },
-          {
-            "src": "https:\/\/www\\.jianshu\\.com\/go-wild\\?ac=\\d+\\&url=https%3A%2F%2F(.*)(:?%2F)?",
+            "src": "https:\/\/www\\.jianshu\\.com\/go-wild\\?ac=\\d+\\&url=http(s?)%3A%2F%2F(.*)(:?%2F)?",
             "kind": "regexp",
-            "dst": "https://$1",
+            "dst": "http$1://$2",
             "enable": true
           },
           {
-            "src": "https:\/\/www\\.jianshu\\.com\/go-wild\\?ac=\\d+\\&url=http%3A%2F%2F(.*)(:?%2F)?",
-            "kind": "regexp",
-            "dst": "http://$1",
-            "enable": true
-          },
-          {
-            "src": "^https://link.jianshu.com/\\?t=https%3A%2F%2F",
+            "src": "^https://link.jianshu.com/\\?t=http(s?)%3A%2F%2F",
             "kind": "wildcard",
-            "dst": "https://",
+            "dst": "http$1://",
             "enable": true
           },
           {
-            "src": "^https://link.jianshu.com/\\?t=http%3A%2F%2F",
+            "src": "^https://links.jianshu.com/go\\?to=http(s?)%3A%2F%2F",
             "kind": "wildcard",
-            "dst": "http://",
+            "dst": "http$1://",
             "enable": true
           },
           {
-            "src": "^https://links.jianshu.com/go\\?to=https%3A%2F%2F",
-            "kind": "wildcard",
-            "dst": "https://",
-            "enable": true
-          },
-          {
-            "src": "^https://links.jianshu.com/go\\?to=http%3A%2F%2F",
-            "kind": "wildcard",
-            "dst": "http://",
-            "enable": true
-          },{
-            "src": "^https?://www.360doc.(cn|com)/outlink.html\\?url=http",
+            "src": "^https?://www.360doc.(cn|com)/outlink.html\\?url=http(s?)",
             "kind": "wildcard",
             "dst": "http",
             "enable": true
           },
           {
-            "src": "^https//www.deviantart.com/users/outgoing\\?http",
+            "src": "^https//www.deviantart.com/users/outgoing\\?http(s?)",
             "kind": "wildcard",
-            "dst": "http",
+            "dst": "http$1",
             "enable": true
           },
           {
-            "src": "^https://www.youtube.com/redirect\\?event=*&redir_token=*&q=https\\?%3A%2F%2F",
+            "src": "^https://www.youtube.com/redirect\\?event=*&redir_token=*&q=http(s?)\\?%3A%2F%2F",
             "kind": "wildcard",
-            "dst": "https://",
+            "dst": "http$1://",
             "enable": true
           },
           {
-            "src": "^https://www.youtube.com/redirect\\?event=*&redir_token=*&q=http\\?%3A%2F%2F",
-            "kind": "wildcard",
-            "dst": "http://",
-            "enable": true
-          },
-          {
-            "src": "https?:\/\/bbs\\.[a-zA-Z]{3,4}\\.edu\\.cn\/v\\d\/jump-to\\.php\\?url=http(s)?:\/\/(.*)&(:?from_mobile_temp=\\d)?",
+            "src": "https?:\/\/bbs\\.[a-zA-Z]{3,4}\\.edu\\.cn\/v\\d\/jump-to\\.php\\?url=http(s?):\/\/(.*)&(:?from_mobile_temp=\\d)?",
             "kind": "regexp",
             "dst": "http$1://$2",
             "enable": true
