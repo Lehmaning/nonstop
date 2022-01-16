@@ -26,7 +26,7 @@
         },
         {
             "src": "//qastack.*/*/",
-            "kind": "regexp",
+            "kind": "wildcard",
             "dst": "//$2.stackexchange.com/questions/",
             "enable": true
         },
