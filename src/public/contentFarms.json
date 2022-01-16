@@ -25,7 +25,7 @@
             "enable": true
         },
         {
-            "src": "\/\/qastack\\.*\/*\/",
+            "src": "//qastack.*/*/",
             "kind": "regexp",
             "dst": "//$2.stackexchange.com/questions/",
             "enable": true
