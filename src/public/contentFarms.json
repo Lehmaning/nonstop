@@ -25,9 +25,9 @@
             "enable": true
         },
         {
-            "src": "\/\/qastack\\..{2,3}\/(\\w*)\/",
+            "src": "\/\/qastack\\.*\/*\/",
             "kind": "regexp",
-            "dst": "//$1.stackexchange.com/questions/",
+            "dst": "//$2.stackexchange.com/questions/",
             "enable": true
         },
         {

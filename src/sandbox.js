@@ -17,7 +17,7 @@ function test(input) {
     let resultURL = input, beforeURL;
     for(let rule of getRule(data)) {
         let srcURL = new RegExp(rule['kind'] == 'wildcard' 
-                    ? rule['src'].replace('*', '.*').replace('/', '\\/').replace('.', '\\.') 
+                    ? rule['src'].replace('*', '(.*)').replace('/', '\\/').replace('.', '\\.') 
                     : rule['src']);
         let dstURL = rule['dst'];
         beforeURL = resultURL;
