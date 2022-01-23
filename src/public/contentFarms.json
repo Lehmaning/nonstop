@@ -47,6 +47,18 @@
             "kind": "regexp",
             "dst": "//askubuntu.com/questions/$1",
             "enable": true
+        },
+        {
+            "src": "https?:\/\/www\\.it-swarm\\.cn\/cron\/.*\/(.*)",
+            "kind": "regexp",
+            "dst": "https://unix.stackexchange.com/questions/$1",
+            "enable": true
+        },
+        {
+            "src": "https?:\/\/www\\.it-swarm\\.cn\/.*\/.*\/(.*)",
+            "kind": "regexp",
+            "dst": "https://stackoverflow.com/$1",
+            "enable": true
         }
     ]
 }
