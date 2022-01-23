@@ -49,15 +49,15 @@
             "enable": true
         },
         {
-            "src": "https?:\/\/www\\.it-swarm\\.cn\/cron\/.*\/(.*)",
+            "src": "https?:\/\/www\\.it-swarm\\.cn\/cron\/.*\/(\\d+)\/",
             "kind": "regexp",
             "dst": "https://unix.stackexchange.com/questions/$1",
             "enable": true
         },
         {
-            "src": "https?:\/\/www\\.it-swarm\\.cn\/.*\/.*\/(.*)",
+            "src": "https?:\/\/www\\.it-swarm\\.cn\/.*\/.*\/(\\d+)\/",
             "kind": "regexp",
-            "dst": "https://stackoverflow.com/$1",
+            "dst": "https://stackoverflow.com/questions/$1",
             "enable": true
         }
     ]
