@@ -43,17 +43,20 @@ Gooreplacer 规则，请搭配浏览器插件 [Gooreplacer](https://github.com/j
 git clone https://github.com/Lehmaning/nonstop.git
 cd nonstop
 npm install
-node src/merge.js
+bin/merge
 ```
 
-你可以用如下命令对 URL 进行测试：
-```shell
+你可以用如下命令对指定 URL 进行测试：
+<!--```shell
 node src/sandbox.js <desktop.json / mobile.json> <source URL>
+```-->
+```shell
+bin/sandbox <desktop/mobile> <source URL>
 ```
 
 ## 其它同类型扩展以及规则
 * [keqingrong/static-files-host](https://github.com/keqingrong/static-files-host)<br/>重定向谷歌静态资源及部分网站到官方镜像的 Gooreplacer 规则。
-* [Teddy-Zhu/gooreplacerRule](https://github.com/Teddy-Zhu/gooreplacerRule)<br/>重定向谷歌静态资源到极客族加速服务的旧版 Gooreplacer 规则。
+<!--* [Teddy-Zhu/gooreplacerRule](https://github.com/Teddy-Zhu/gooreplacerRule)<br/>重定向谷歌静态资源到极客族加速服务的旧版 Gooreplacer 规则。-->
 * [OldPanda/Open-the-F-king-URL-Right-Now](https://github.com/OldPanda/Open-the-F-king-URL-Right-Now)：去除手动跳转的油猴脚本。
 * [ClearUrls](https://github.com/ClearURLs/Addon)<br/>一个清理网页中 URL 的扩展，处理网页跳转链接的规则表现更灵活，甚至可以直接清理页面内的链接。<br/>
 对应的规则正在收集中。

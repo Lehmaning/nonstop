@@ -1,7 +1,9 @@
+#!/usr/bin/env -S node
 let fs = require('fs');
 let path = require('path');
-let pubRuleLocation = path.resolve(__dirname + '/public/');
-let priRuleLocation = path.resolve(__dirname + '/private/');
+let srcLocation = path.resolve(__dirname + '/../src')
+let pubRuleLocation = srcLocation + '/public/';
+let priRuleLocation = srcLocation + '/private/';
 let destFilesLocation = file => path.resolve(__dirname + `/../${file}`);
 let buildFilesLocation = file => path.resolve(__dirname + `/../build/${file}`)
 

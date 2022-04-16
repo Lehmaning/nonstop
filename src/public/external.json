@@ -55,6 +55,12 @@
             "enable": true
           },
           {
+            "src": "^https://link.juejin.cn/\\?target=http(s?)%3A%2F%2F",
+            "kind": "wildcard",
+            "dst": "http$1://",
+            "enable": true
+          },
+          {
             "src": "https?:\/\/bbs\\.[a-zA-Z]{3,4}\\.edu\\.cn\/v\\d\/jump-to\\.php\\?url=http(s?):\/\/(.*)&(:?from_mobile_temp=\\d)?",
             "kind": "regexp",
             "dst": "http$1://$2",

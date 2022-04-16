@@ -36,5 +36,16 @@
             "dst": "//m.mediawiki.org",
             "enable": false
         }
-    ]
+    ],
+    "response-headers": [
+	    {
+		    "src": "*",
+		    "kind": "wildcard",
+		    "op": "cancel",
+		    "name": "content-security-policy",
+		    "value": null,
+		    "enable": true
+	    }
+    ],
+    "cancel-rules": []
 }
