@@ -12,7 +12,7 @@ Gooreplacer 规则，请搭配浏览器插件 [Gooreplacer](https://github.com/j
 * 部分网站强制使用桌面端或移动端。
 * 部分被墙网站改用墙内官方镜像。
 
-部分规则因为会导致网站出错已经默认禁用，需要启用的话可以手动将规则下载到本地，然后在 Gooreplacer 配置页面中导入即可。
+部分规则因为会导致网站出错已经默认禁用，需要启用的话可以手动将规则下载到本地，然后在 Gooreplacer 配置页面中导入并启用即可。
 
 ## 如何使用？
 
@@ -33,11 +33,6 @@ Gooreplacer 规则，请搭配浏览器插件 [Gooreplacer](https://github.com/j
 2. 下载在线规则，将后缀名改为 ```.gson``` 后导入即可。
 
 ## 本地构建
-### 依赖
-* nodejs
-    * fs
-    * path
-
 ### 生成
 ```shell
 git clone https://github.com/Lehmaning/nonstop.git
@@ -46,6 +41,7 @@ npm install
 bin/merge
 ```
 
+### 测试工具
 你可以用如下命令对指定 URL 进行测试：
 <!--```shell
 node src/sandbox.js <desktop.json / mobile.json> <source URL>
