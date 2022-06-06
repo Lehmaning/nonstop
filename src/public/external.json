@@ -61,6 +61,12 @@
             "enable": true
           },
           {
+            "src": "^https:\/\/ref\\.gamer\\.com\\.tw\/redir\\.php\\?url=http(s?)%3A%2F%2F([^(%2F)]*)%2F(.*)",
+            "kind": "regexp",
+            "dst": "http$1://$2/$3",
+            "enable": true
+          },
+          {
             "src": "https?:\/\/bbs\\.[a-zA-Z]{3,4}\\.edu\\.cn\/v\\d\/jump-to\\.php\\?url=http(s?):\/\/(.*)&(:?from_mobile_temp=\\d)?",
             "kind": "regexp",
             "dst": "http$1://$2",

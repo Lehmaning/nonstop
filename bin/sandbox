@@ -1,13 +1,17 @@
 #!/usr/bin/env -S node
-let fs = require('fs');
-let path = require('path');
-/*try {let colors = require('colors');} catch {}*/
+if(process.argv.slice(2)[0] in {"-h":"", "--help":"", "help":""}) {
+    console.log(`
+        Usage: sandbox desktop/mobile sourceURL
+    `)
+    process.exit()
+}
+let fs = require("fs");
+let path = require("path");
 let ruleName = process.argv.slice(2)[0] + ".json";
-let testURL = process.argv.slice(2)[1];
-let srcLocation = path.resolve(__dirname + '/../src')
-let ruleLocation = path.resolve(srcLocation + ruleName + ".json");
+let ruleLocation = path.resolve(__dirname + "/../" + ruleName)
 let ruleFile = fs.readFileSync(ruleLocation).toString();
 let data = JSON.parse(ruleFile);
+let testURL = process.argv.slice(2)[1];
 
 function* getRule(data){
     for(let r of data["redirect-rules"]) {
@@ -18,16 +22,16 @@ function* getRule(data){
 function test(input) {
     let resultURL = input, beforeURL;
     for(let rule of getRule(data)) {
-        let srcURL = new RegExp(rule['kind'] == 'wildcard' 
-                    ? rule['src'].replace('\.', '\\.').replace('*', '(.*)').replace('/', '\\/') 
-                    : rule['src']);
-        let dstURL = rule['dst'];
+        let srcURL = new RegExp(rule["kind"] == "wildcard" 
+                    ? rule["src"].replace("\.", "\\.").replace("*", "(.*)").replace("/", "\\/") 
+                    : rule["src"]);
+        let dstURL = rule["dst"];
         beforeURL = resultURL;
         resultURL = beforeURL.replace(srcURL, dstURL);
         if(resultURL == beforeURL) continue;
-        console.log('\n' + rule['src'].toString(), '->', dstURL);
-        /* console.log('\n' + srcURL.toString(), '->', dstURL); */
-        console.log('The result URL is:', resultURL);
+        console.log("Matched", rule["kind"], "rule:\n", rule["src"].toString(), "->", dstURL);
+        /* console.log("\n" + srcURL.toString(), "->", dstURL); */
+        console.log("The result URL is:", resultURL);
     }
 }
 test(testURL);
