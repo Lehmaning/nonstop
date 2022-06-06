@@ -1,0 +1,12 @@
+{
+    "response-headers": [
+         {
+            "src": "dropbox.com",
+            "kind": "wildcard",
+            "op": "cancel",
+            "name": "content-security-policy",
+            "value": null,
+            "enable": true
+        }
+    ]
+}
