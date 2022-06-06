@@ -67,9 +67,9 @@
             "enable": true
           },
           {
-            "src": "https://outgoing.prod.mozaws.net/v1/*/http(s?)",
-            "kind": "wildcard",
-            "dst": "http$2://",
+            "src": "https:\/\/outgoing\\.prod\\.mozaws\\.net\/v\\d\/[^\/]*\/http(s?)%3A",
+            "kind": "regexp",
+            "dst": "http$1:",
             "enable": true
           }
     ]
