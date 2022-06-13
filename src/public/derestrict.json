@@ -6,7 +6,7 @@
             "op": "cancel",
             "name": "content-security-policy",
             "value": null,
-            "enable": true
+            "enable": false
         }
     ]
 }
