@@ -1,7 +1,7 @@
 #!/usr/bin/env -S node
 if(process.argv.slice(2)[0] in {"-h":"", "--help":"", "help":""}) {
     console.log(`
-        Usage: sandbox desktop/mobile sourceURL
+Usage: sandbox desktop/mobile sourceURL
     `)
     process.exit()
 }
