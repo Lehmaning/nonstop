@@ -40,7 +40,7 @@
             "src": "google.com/recaptcha",
             "kind": "wildcard",
             "dst": "recaptcha.net/recaptcha",
-            "enable": true
+            "enable": false
           },
           {
             "src": "google.com/chrome/?$",
