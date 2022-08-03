@@ -1,6 +1,18 @@
 {
     "redirect-rules": [
         {
+            "src": "issuehint.com/repo/",
+            "kind": "wildcard",
+            "dst": "github.com/",
+            "enable": true
+        },
+        {
+            "src": "issuehint.com/issue/([^\\d]*)/",
+            "kind": "regexp",
+            "dst": "github.com/$1/issues",
+            "enable": true
+        },
+        {
             "src": "//qastack.*/superuser/",
             "kind": "wildcard",
             "dst": "//superuser.com/questions/",
