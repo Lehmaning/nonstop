@@ -25,7 +25,7 @@
             "enable": true
           },
           {
-            "src": "^https://www.coolapk.com/link\\?url=http(s?)%3A%2F%2F⅚",
+            "src": "^https://*.coolapk.com/link\\?url=http(s?)%3A%2F%2F⅚",
             "kind": "wildcard",
             "dst": "http$1://",
             "enable": true
