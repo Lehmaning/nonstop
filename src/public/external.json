@@ -19,15 +19,15 @@
             "enable": true
           },
           {
-            "src": "https:\/\/www\\.jianshu\\.com\/go-wild\\?ac=\\d+\\&url=http(s?)%3A%2F%2F(.*)(:?%2F)?",
+            "src": "https:\/\/www\\.jianshu\\.com\/go-wild\\?ac=\\d+\\&url=http(s?)%3A%2F%2F([^(%2F)]*)(:?%2F)?",
             "kind": "regexp",
-            "dst": "http$1://$2",
+            "dst": "http$1://$2/",
             "enable": true
           },
           {
-            "src": "^https?://*.coolapk.com/link\\?url=http(s?)%3A%2F%2F",
-            "kind": "wildcard",
-            "dst": "http$1://",
+            "src": "https?:\/\/www\\.coolapk\\.com\/link\\?url=http(s?)%3A%2F%2F([^(%2F)]*)(:?%2F)?",
+            "kind": "regexp",
+            "dst": "http$1://$2/",
             "enable": true
           },
           {
