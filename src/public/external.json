@@ -25,6 +25,12 @@
             "enable": true
           },
           {
+            "src": "^https://www.coolapk.com/link\\?url=http(s?)%3A%2F%2F⅚",
+            "kind": "wildcard",
+            "dst": "http$1://",
+            "enable": true
+          },
+          {
             "src": "^https://link.jianshu.com/\\?t=http(s?)%3A%2F%2F",
             "kind": "wildcard",
             "dst": "http$1://",
