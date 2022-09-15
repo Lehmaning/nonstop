@@ -91,7 +91,7 @@
             "enable": true
           },
           {
-            "src": "https:\/\/outgoingprod\\.outgoing\\.prod\\.webservices\\.mozgcp\\.net\/v\\d\/[^\/]*\/http(s?)%3A",
+            "src": "https:\/\/prod\\.outgoing\\.prod\\.webservices\\.mozgcp\\.net\/v\\d\/[^\/]*\/http(s?)%3A",
             "kind": "regexp",
             "dst": "http$1:",
             "enable": true
