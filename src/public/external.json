@@ -67,10 +67,10 @@
             "enable": true
           },
           {
-            "src": "^https://link.juejin.cn/\\?target=http(s?)%3A%2F%2F",
-            "kind": "wildcard",
-            "dst": "http$1://",
-            "enable": true
+            "src": "https?:\/\/link\\.juejin\\.cn\/?target=http(s?)%3A%2F%2F([^(%2F)]*)(:?%2F)?",
+            "kind": "regexp",
+            "dst": "http$1://$2/",
+            "enable": false
           },
           {
             "src": "^https:\/\/ref\\.gamer\\.com\\.tw\/redir\\.php\\?url=http(s?)%3A%2F%2F([^(%2F)]*)%2F(.*)",
@@ -85,9 +85,9 @@
             "enable": true
           },
           {
-            "src": "^https:\/\/link\\..*\\..*/\\?target=http(s?)(?:%3A|:)(?:%2F%2F|\/\/)",
+            "src": "^https:\/\/link\\..*\\..*/\\?target=http(s?)(?:%3A|:)(?:%2F%2F|\/\/)([^(%2F)]*)(:?%2F)?",
             "kind": "regexp",
-            "dst": "http$1://",
+            "dst": "http$1://$2/",
             "enable": true
           },
           {
