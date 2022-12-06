@@ -13,9 +13,27 @@
             "enable": true
           },
           {
-            "src": "zhihu\\.com\/oia\/(answer|question)s\/(\\d+)\\?.*",
+            "src": "//oia.zhihu.com",
+            "kind": "wildcard",
+            "dst": "//www.zhihu.com/oia",
+            "enable": true
+          },
+          {
+            "src": "www\\.zhihu\\.com\/oia\/(answer|question)s\/(\\d+)\\?.*",
             "kind": "regexp",
             "dst": "zhihu.com/$1/$2",
+            "enable": true
+          },
+          {
+            "src": "www\\.zhihu\\.com\/oia\/articles\/(\\d+)\\?.*",
+            "kind": "regexp",
+            "dst": "zhuanlan.zhihu.com/p/$1",
+            "enable": true
+          },
+          {
+            "src": "*.bilibili.com/read/cv",
+            "kind": "wildcard",
+            "dst": "bilibili.com/mobile?id=",
             "enable": true
           },
           {
@@ -36,16 +54,6 @@
             "dst": "//m.mediawiki.org",
             "enable": false
         }
-    ],
-    "response-headers": [
-	    {
-		    "src": "*",
-		    "kind": "wildcard",
-		    "op": "cancel",
-		    "name": "content-security-policy",
-		    "value": null,
-		    "enable": true
-	    }
     ],
     "cancel-rules": []
 }

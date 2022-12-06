@@ -49,7 +49,7 @@
             "enable": true
         },
         {
-            "src": "\/\/(?:nico\\.ms|acg\\.tv)\/sm",
+            "src": "//nico.ms/sm",
             "kind": "regexp",
             "dst": "//www.nicovideo.jp/watch/sm",
             "enable": true

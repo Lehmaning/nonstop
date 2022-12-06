@@ -37,9 +37,9 @@
             "enable": true
         },
         {
-            "src": "//qastack.*/*/",
-            "kind": "wildcard",
-            "dst": "//$2.stackexchange.com/questions/",
+            "src": "\/\/qastack\\..{2,4}\/([^\/]*)",
+            "kind": "regexp",
+            "dst": "//$1.stackexchange.com/questions",
             "enable": true
         },
         {

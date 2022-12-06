@@ -19,21 +19,21 @@
             "enable": true
           },
           {
-            "src": "^https?:\/\/www\\.oschina\\.net\/action\/GoToLink\\?url=http(s?)%3A%2F%2F([^(%2F)]*)%2F(.*)",
-            "kind": "regexp",
-            "dst": "http$1://$2/$3",
+            "src": "https://www.oschina.net/action/GoToLink\\?url=http(s?)%3A%2F%2F",
+            "kind": "wildcard",
+            "dst": "http$1://",
             "enable": true
           },
           {
-            "src": "https:\/\/www\\.jianshu\\.com\/go-wild\\?ac=\\d+\\&url=http(s?)%3A%2F%2F([^(%2F)]*)(:?%2F)?",
+            "src": "https:\/\/www\\.jianshu\\.com\/go-wild\\?ac=\\d+\\&url=http(s?)%3A%2F%2F",
             "kind": "regexp",
-            "dst": "http$1://$2/",
+            "dst": "http$1://",
             "enable": true
           },
           {
-            "src": "https?:\/\/www\\.coolapk\\.com\/link\\?url=http(s?)%3A%2F%2F([^(%2F)]*)(:?%2F)?",
-            "kind": "regexp",
-            "dst": "http$1://$2/",
+            "src": "https://www.coolapk.com/link\\?url=http(s?)%3A%2F%2F",
+            "kind": "wildcard",
+            "dst": "http$1://",
             "enable": true
           },
           {
@@ -67,27 +67,26 @@
             "enable": true
           },
           {
-            "src": "https?:\/\/link\\.juejin\\.cn\/?target=http(s?)%3A%2F%2F([^(%2F)]*)(:?%2F)?",
-            "kind": "regexp",
-            "dst": "http$1://$2/",
-            "enable": false
+            "src": "https://link.juejin.cn/?target=http(s?)%3A%2F%2F?",
+            "kind": "wildcard",
+            "dst": "http$1://"
           },
           {
-            "src": "^https:\/\/ref\\.gamer\\.com\\.tw\/redir\\.php\\?url=http(s?)%3A%2F%2F([^(%2F)]*)%2F(.*)",
-            "kind": "regexp",
-            "dst": "http$1://$2/$3",
+            "src": "https://ref.gamer.com.tw/redir.php\\?url=http(s?)%3A%2F%2F",
+            "kind": "wildcard",
+            "dst": "http$1://",
             "enable": true
           },
           {
-            "src": "https?:\/\/bbs\\.[a-zA-Z]{3,4}\\.edu\\.cn\/v\\d\/jump-to\\.php\\?url=http(s?):\/\/(.*)&(:?from_mobile_temp=\\d)?",
+            "src": "https?:\/\/bbs\\.[a-zA-Z]{3,4}\\.edu\\.cn\/v\\d\/jump-to\\.php\\?url=http(s?):\/\/",
             "kind": "regexp",
-            "dst": "http$1://$2",
+            "dst": "http$1://",
             "enable": true
           },
           {
-            "src": "^https:\/\/link\\..*\\..*/\\?target=http(s?)(?:%3A|:)(?:%2F%2F|\/\/)([^(%2F)]*)(:?%2F)?",
+            "src": "^https:\/\/link\\..*\\..*/\\?target=http(s?)(?:%3A|:)(?:%2F%2F|\/\/)",
             "kind": "regexp",
-            "dst": "http$1://$2/",
+            "dst": "http$1://",
             "enable": true
           },
           {

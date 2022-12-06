@@ -1,9 +1,15 @@
 {
     "redirect-rules": [
           {
-            "src": "https?:\/\/raw\\.githubusercontent\\.com\/(.*)\/(.*)/(:?.*)/(.*)",
+            "src": "https?:\/\/raw\\.githubusercontent\\.com\/(.*)\/(.*)/(?:.*)/(.*)",
             "kind": "regexp",
             "dst": "https://cdn.jsdelivr.net/gh/$1/$2/$3",
+            "enable": false
+          },
+          {
+            "src": "https?:\/\/raw\\.githubusercontent\\.com\/(.*)\/(.*)/(?:.*)/(.*)",
+            "kind": "regexp",
+            "dst": "https://fastly.jsdelivr.net/gh/$1/$2/$3",
             "enable": false
           },
           {
@@ -52,7 +58,7 @@
             "src": "translate.google.com",
             "kind": "wildcard",
             "dst": "translate.google.cn",
-            "enable": true
+            "enable": false
           },
           {
             "src": "developers.google.com",

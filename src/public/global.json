@@ -1,10 +1,10 @@
 {
     "redirect-rules": [
         {
-            "src": "([^/(:?%2F)])%2F$",
+            "src": "([^/(?:%2F)])%2F$",
             "kind": "regexp",
             "dst": "$1/",
-            "enable": true
+            "enable": false
           }
     ],
     "cancel-rules": [],
