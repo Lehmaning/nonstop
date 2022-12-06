@@ -20,7 +20,9 @@ function updateRule(input, output=[]) {
 }
 function updateThinRule(input, output=[]) {
   let data = JSON.parse(input);
-  for(let rule of Object.keys(data)) output[rule].push.apply(output[rule].filter(enable => {return enable =="true"}), data[rule]);
+  for(let rule of Object.keys(data)) {
+    output[rule].push.apply(output[rule], data[rule].filter(item => {return item.enable == true}));
+  }
   return output;
 }
 
@@ -28,8 +30,8 @@ function build() {
   let outputData = {"redirect-rules":[],"cancel-rules":[],"request-headers": [],"response-headers": []};
   let outputThinData = {"redirect-rules":[],"cancel-rules":[],"request-headers": [],"response-headers": []};
   for(let i of ruleFileRead(pubRuleLocation)) {
-  outputData = updateRule(i, outputData);
-  outputThinData = updateThinRule(i, outputThinData);
+    outputData = updateRule(i, outputData);
+    outputThinData = updateThinRule(i, outputThinData);
   }
   let e = end => 
         fs.readFileSync(path.resolve(priRuleLocation + '/' + end + ".json"));
@@ -43,12 +45,17 @@ function build() {
             JSON.parse(JSON.stringify(outputThinData)));
   
   let write = (end, data) => {
-    fs.writeFileSync(
-      destFilesLocation(end + '.json'),
-      JSON.stringify(data),
-      err => {if(err) return console.log(err)
-    });
-    return console.log("The " + end + " rule saved!")
+    let outputLocation = destFilesLocation(end + ".json");
+    if(fs.readFileSync(outputLocation) != JSON.stringify(data)) {
+      fs.writeFileSync(
+        outputLocation,
+        JSON.stringify(data),
+        err => {if(err) return console.log(err)
+      });
+      return console.log("The " + end + " rule saved!");
+    } else {
+      return console.log("The " + end + " rule not changed, skipping.")
+    }
   };
   /*let copy = end => 
      fs.copyFile(destFilesLocation(end + '.json'),
