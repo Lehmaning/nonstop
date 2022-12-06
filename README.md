@@ -1,33 +1,31 @@
 # nonstop
-
 ## 规则介绍
-
 Gooreplacer 规则，请搭配浏览器插件 [Gooreplacer](https://github.com/jiacai2050/gooreplacer) 使用。目前通过重定向可实现的功能有：
 
-* 去除部分平台的外链跳转提醒。
-* 部分静态资源改用第三方 CDN 加速。
-* 部分短链接使用 [unshort.link](https://unshort.link) 解析（需要手动确认跳转）。
-* 移除部分链接跟踪参数。
-* Bilibili、Niconico 以及 YouTube 短链接直接跳转到原地址，并移除跟踪参数。
-* 部分网站强制使用桌面端或移动端。
 * 部分被墙网站改用墙内官方镜像。
+* 部分静态资源改用第三方 CDN 加速。
+* 移除部分链接跟踪参数，如 ```utm```、```share```、```spm```等。
+* 部分网站强制使用桌面端或移动端。
+* Bilibili、Niconico 以及 YouTube 短链接直接跳转到原地址，并移除跟踪参数。
+* 去除部分平台的外链跳转提醒。（目前因为URLEncoding，会无法跳转到正确的网址，请使用[替代品](https://github.com/OldPanda/Open-the-F-king-URL-Right-Now)来保证跳转）
+* 部分短链接使用 [unshort.link](https://unshort.link) 解析（需要手动确认跳转，目前已禁用）。
 
-部分规则因为会导致网站出错已经默认禁用，需要启用的话可以手动将规则下载到本地，然后在 Gooreplacer 配置页面中导入并启用即可。
+大部分规则因为会导致网站出错已经默认禁用，需要启用的话可以手动将规则下载到本地，然后在 Gooreplacer 配置页面中导入并启用即可。
 
 
 
 ## 如何使用？
-
 ### 在线规则
-
 1. 安装浏览器插件 [Gooreplacer](https://github.com/jiacai2050/gooreplacer)
 2. 在 Gooreplacer 的配置页面中点击在线规则，点击编辑，将规则地址粘贴后点击 OK
 3. 点击更新规则即可
 
 本 repo 维护两个规则列表，请根据设备选择要导入的在线规则：
 
-* 桌面端 (desktop.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/master/desktop.json)、[jsDelivr](https://cdn.jsdelivr.net/gh/Lehmaning/nonstop/desktop.json)
-* 移动端 (mobile.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/master/mobile.json)、[jsDelivr](https://cdn.jsdelivr.net/gh/Lehmaning/nonstop/mobile.json)
+* 桌面端 (desktop.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/master/desktop.json)、[jsDelivr](https://fastly.jsdelivr.net/gh/Lehmaning/nonstop/desktop.json)
+>* 仅启用的规则 (desktop.thin.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/master/desktop.thin.json)、[jsDelivr](https://fastly.jsdelivr.net/gh/Lehmaning/nonstop/desktop.thin.json)
+* 移动端 (mobile.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/master/mobile.json)、[jsDelivr](https://fastly.jsdelivr.net/gh/Lehmaning/nonstop/mobile.json)
+>* 仅启用的规则 (mobile.thin.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/master/mobile.thin.json)、[jsDelivr](https://fastly.jsdelivr.net/gh/Lehmaning/nonstop/mobile.thin.json)
 
 ### 本地导入
 1. 在 [Release](https://github.com/Lehmaning/nonstop/archive/refs/heads/main.zip)，并解压缩，在 Gooreplacer 页面中导入解压出来的 gson 文件即可。
@@ -39,15 +37,11 @@ Gooreplacer 规则，请搭配浏览器插件 [Gooreplacer](https://github.com/j
 ```shell
 git clone https://github.com/Lehmaning/nonstop.git
 cd nonstop
-npm install
 bin/merge
 ```
 
 ### 测试工具
 你可以用如下命令对指定 URL 进行测试：
-<!--```shell
-node src/sandbox.js <desktop.json / mobile.json> <source URL>
-```-->
 ```shell
 bin/sandbox <desktop/mobile> <source URL>
 ```
