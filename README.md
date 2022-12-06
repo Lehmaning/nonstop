@@ -23,9 +23,9 @@ Gooreplacer 规则，请搭配浏览器插件 [Gooreplacer](https://github.com/j
 本 repo 维护两个规则列表，请根据设备选择要导入的在线规则：
 
 * 桌面端 (desktop.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/master/desktop.json)、[jsDelivr](https://fastly.jsdelivr.net/gh/Lehmaning/nonstop/desktop.json)
->* 仅启用的规则 (desktop.thin.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/master/desktop.thin.json)、[jsDelivr](https://fastly.jsdelivr.net/gh/Lehmaning/nonstop/desktop.thin.json)
+    * 仅启用的规则 (desktop.thin.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/master/desktop.thin.json)、[jsDelivr](https://fastly.jsdelivr.net/gh/Lehmaning/nonstop/desktop.thin.json)
 * 移动端 (mobile.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/master/mobile.json)、[jsDelivr](https://fastly.jsdelivr.net/gh/Lehmaning/nonstop/mobile.json)
->* 仅启用的规则 (mobile.thin.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/master/mobile.thin.json)、[jsDelivr](https://fastly.jsdelivr.net/gh/Lehmaning/nonstop/mobile.thin.json)
+    * 仅启用的规则 (mobile.thin.json)：[Raw](https://github.com/Lehmaning/nonstop/raw/master/mobile.thin.json)、[jsDelivr](https://fastly.jsdelivr.net/gh/Lehmaning/nonstop/mobile.thin.json)
 
 ### 本地导入
 1. 在 [Release](https://github.com/Lehmaning/nonstop/archive/refs/heads/main.zip)，并解压缩，在 Gooreplacer 页面中导入解压出来的 gson 文件即可。
