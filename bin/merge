@@ -22,6 +22,7 @@ function updateThinRule(input, output=[]) {
   let data = JSON.parse(input);
   for(let rule of Object.keys(data)) {
     output[rule].push.apply(output[rule], data[rule].filter(item => {return item.enable == true}));
+    console.log(data[rule].filter(item => {return item.enable == true}));
   }
   return output;
 }
@@ -39,9 +40,9 @@ function build() {
             JSON.parse(JSON.stringify(outputData)))
   let mobileData = updateRule(e('mobile'),
             JSON.parse(JSON.stringify(outputData)));
-  let desktopThinData = updateRule(e('desktop'),
+  let desktopThinData = updateThinRule(e('desktop'),
             JSON.parse(JSON.stringify(outputThinData)))
-  let mobileThinData = updateRule(e('mobile'),
+  let mobileThinData = updateThinRule(e('mobile'),
             JSON.parse(JSON.stringify(outputThinData)));
   
   let write = (end, data) => {
