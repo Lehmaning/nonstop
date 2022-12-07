@@ -1,54 +1,60 @@
 {
     "redirect-rules": [
-          {
+        {
+            "src": "(?:jump2\\.bdimg\\.com|wefan\\.baidu\\.com|www\\.tieba\\.com|c\\.tieba\\.baidu\\.com)",
+            "kind": "regexp",
+            "dst": "tieba.baidu.com",
+            "enable": true
+        },
+        {
             "src": "\/\/(?:jump2\\.bdimg\\.com|wefan\\.baidu\\.com|www\\.tieba\\.com|(?:c\\.)?tieba\\.baidu\\.com)\/p\/(\\d+)?.*",
             "kind": "regexp",
             "dst": "//byokpg.smartapps.cn/pages/pb/pb?tid=$1",
-            "enable": true
-          },
-          {
+            "enable": false
+        },
+        {
             "src": "\/\/(?:jump2\\.bdimg\\.com|wefan\\.baidu\\.com|www\\.tieba\\.com|(?:c\\.)?tieba\\.baidu\\.com).*\\?kw=(.*)(?:\\&.*)",
             "kind": "regexp",
             "dst": "//byokpg.smartapps.cn/pages/frs/frs?kw=$1",
-            "enable": true
-          },
-          {
+            "enable": false
+        },
+        {
             "src": "//oia.zhihu.com",
             "kind": "wildcard",
             "dst": "//www.zhihu.com/oia",
             "enable": true
-          },
-          {
+        },
+        {
             "src": "www\\.zhihu\\.com\/oia\/(answer|question)s\/(\\d+)\\?.*",
             "kind": "regexp",
             "dst": "zhihu.com/$1/$2",
             "enable": true
-          },
-          {
+        },
+        {
             "src": "www\\.zhihu\\.com\/oia\/articles\/(\\d+)\\?.*",
             "kind": "regexp",
             "dst": "zhuanlan.zhihu.com/p/$1",
             "enable": true
-          },
-          {
+        },
+        {
             "src": "*.bilibili.com/read/cv",
             "kind": "wildcard",
             "dst": "bilibili.com/mobile?id=",
             "enable": true
-          },
-          {
+        },
+        {
             "src": "//zh.moegirl.org.cn",
             "kind": "wildcard",
             "dst": "//mzh.moegirl.org.cn",
             "enable": false
-          },
-          {
+        },
+        {
             "src": "//*.cnbeta.com/articles/*/",
             "kind": "wildcard",
             "dst": "//m.cnbeta.com/view/",
             "enable": true
-          },
-          {
+        },
+        {
             "src": "//www.mediawiki.org",
             "kind": "wildcard",
             "dst": "//m.mediawiki.org",

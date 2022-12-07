@@ -8,67 +8,72 @@ let destFilesLocation = file => path.resolve(__dirname + `/../${file}`);
 //let buildFilesLocation = file => path.resolve(__dirname + `/../build/${file}`)
 
 function* ruleFileRead(location) {
-  var ruleFilesList = fs.readdirSync(location);
-  for(let i of ruleFilesList) {
-    yield file = fs.readFileSync(path.resolve(location + '/' + i)).toString();
-  }
+    var ruleFilesList = fs.readdirSync(location);
+    for(let i of ruleFilesList) {
+        yield file = fs.readFileSync(path.resolve(location + '/' + i)).toString();
+    }
 }
+
 function updateRule(input, output=[]) {
-  let data = JSON.parse(input);
-  for(let rule of Object.keys(data)) output[rule].push.apply(output[rule], data[rule]);
-  return output;
+    let data = JSON.parse(input);
+    for(let rule of Object.keys(data)) output[rule].push.apply(output[rule], data[rule]);
+    return output;
 }
+
 function updateThinRule(input, output=[]) {
-  let data = JSON.parse(input);
-  for(let rule of Object.keys(data)) {
-    output[rule].push.apply(output[rule], data[rule].filter(item => {return item.enable == true}));
-    console.log(data[rule].filter(item => {return item.enable == true}));
-  }
-  return output;
+    let data = JSON.parse(input);
+    for(let rule of Object.keys(data)) {
+        output[rule].push.apply(output[rule], data[rule].filter(item => {return item.enable == true}));
+        console.log(data[rule].filter(item => {return item.enable == true}));
+    }
+    return output;
 }
 
 function build() {
-  let outputData = {"redirect-rules":[],"cancel-rules":[],"request-headers": [],"response-headers": []};
-  let outputThinData = {"redirect-rules":[],"cancel-rules":[],"request-headers": [],"response-headers": []};
-  for(let i of ruleFileRead(pubRuleLocation)) {
-    outputData = updateRule(i, outputData);
-    outputThinData = updateThinRule(i, outputThinData);
-  }
-  let e = end => 
-        fs.readFileSync(path.resolve(priRuleLocation + '/' + end + ".json"));
-  let desktopData = updateRule(e('desktop'),
-            JSON.parse(JSON.stringify(outputData)))
-  let mobileData = updateRule(e('mobile'),
-            JSON.parse(JSON.stringify(outputData)));
-  let desktopThinData = updateThinRule(e('desktop'),
-            JSON.parse(JSON.stringify(outputThinData)))
-  let mobileThinData = updateThinRule(e('mobile'),
-            JSON.parse(JSON.stringify(outputThinData)));
-  
-  let write = (end, data) => {
-    let outputLocation = destFilesLocation(end + ".json");
-    if(fs.readFileSync(outputLocation) != JSON.stringify(data)) {
-      fs.writeFileSync(
-        outputLocation,
-        JSON.stringify(data),
-        err => {if(err) return console.log(err)
-      });
-      return console.log("The " + end + " rule saved!");
-    } else {
-      return console.log("The " + end + " rule not changed, skipping.")
+    let outputData = {"redirect-rules":[],"cancel-rules":[],"request-headers": [],"response-headers": []};
+    let outputThinData = {"redirect-rules":[],"cancel-rules":[],"request-headers": [],"response-headers": []};
+    for(let i of ruleFileRead(pubRuleLocation)) {
+        outputData = updateRule(i, outputData);
+        outputThinData = updateThinRule(i, outputThinData);
     }
-  };
-  /*let copy = end => 
+
+    let e = end => 
+        fs.readFileSync(path.resolve(priRuleLocation + '/' + end + ".json"));
+
+    let desktopData = updateRule(e('desktop'),
+        JSON.parse(JSON.stringify(outputData)))
+    let mobileData = updateRule(e('mobile'),
+        JSON.parse(JSON.stringify(outputData)));
+    let desktopThinData = updateThinRule(e('desktop'),
+        JSON.parse(JSON.stringify(outputThinData)))
+    let mobileThinData = updateThinRule(e('mobile'),
+        JSON.parse(JSON.stringify(outputThinData)));
+
+    let write = (end, data) => {
+        let outputLocation = destFilesLocation(end + ".json");
+        if(fs.readFileSync(outputLocation) != JSON.stringify(data)) {
+            fs.writeFileSync(
+                outputLocation,
+                JSON.stringify(data),
+                err => {if(err) return console.log(err)
+                });
+            return console.log("The " + end + " rule saved!");
+        } else {
+            return console.log("The " + end + " rule not changed, skipping.")
+        }
+    };
+    /*let copy = end => 
      fs.copyFile(destFilesLocation(end + '.json'),
                 buildFilesLocation(end + '.gson'), err => 
                 {if(err) return console.log(err)
   });*/
 
-  write("desktop", desktopData);
-  write("mobile", mobileData);
-  write("desktop.thin", desktopThinData);
-  write("mobile.thin", mobileThinData);
-  //copy("desktop");
-  //copy("mobile");
+    write("desktop", desktopData);
+    write("mobile", mobileData);
+    write("desktop.thin", desktopThinData);
+    write("mobile.thin", mobileThinData);
+    //copy("desktop");
+    //copy("mobile");
 }
+
 build();

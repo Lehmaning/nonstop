@@ -1,6 +1,6 @@
 {
     "response-headers": [
-         {
+        {
             "src": "dropbox.com",
             "kind": "wildcard",
             "op": "cancel",

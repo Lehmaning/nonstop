@@ -30,7 +30,7 @@ Gooreplacer 规则，请搭配浏览器插件 [Gooreplacer](https://github.com/j
 ### 本地导入
 1. 在 [Release](https://github.com/Lehmaning/nonstop/archive/refs/heads/main.zip)，并解压缩，在 Gooreplacer 页面中导入解压出来的 gson 文件即可。
 注意：release 页面下的文件不会及时更新。
-2. 下载在线规则，将后缀名改为 ```.gson``` 后导入即可。
+2. 下载在线规则后导入即可。
 
 ## 本地构建
 ### 生成

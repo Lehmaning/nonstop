@@ -5,7 +5,7 @@
             "kind": "regexp",
             "dst": "$1/",
             "enable": false
-          }
+        }
     ],
     "cancel-rules": [],
     "request-headers": [],

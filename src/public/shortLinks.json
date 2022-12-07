@@ -21,7 +21,7 @@
         {
             "src": "\/\/youtu\\.be\/",
             "kind": "regexp",
-            "dst": "//invidious.snopyta.org/",
+            "dst": "//redirect.invidious.io/",
             "enable": false
         },
         {
@@ -50,7 +50,7 @@
         },
         {
             "src": "//nico.ms/sm",
-            "kind": "regexp",
+            "kind": "wildcard",
             "dst": "//www.nicovideo.jp/watch/sm",
             "enable": true
         },

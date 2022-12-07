@@ -1,106 +1,106 @@
 {
     "redirect-rules": [
-          {
+        {
             "src": "lanzous.com",
             "kind": "wildcard",
             "dst": "lanzoui.com",
             "enable": true
-          },
-          {
+        },
+        {
             "src": "lanzoub.com",
             "kind": "wildcard",
             "dst": "lanzoui.com",
             "enable": true
-          },
-          {
+        },
+        {
             "src": "^https://mail.qq.com/cgi-bin/*\\?*=*&gourl=http(s?)%3A%2F%2F",
             "kind": "wildcard",
             "dst": "http$1://",
-            "enable": true
-          },
-          {
+            "enable": false
+        },
+        {
             "src": "https://www.oschina.net/action/GoToLink\\?url=http(s?)%3A%2F%2F",
             "kind": "wildcard",
             "dst": "http$1://",
             "enable": true
-          },
-          {
+        },
+        {
             "src": "https:\/\/www\\.jianshu\\.com\/go-wild\\?ac=\\d+\\&url=http(s?)%3A%2F%2F",
             "kind": "regexp",
             "dst": "http$1://",
             "enable": true
-          },
-          {
+        },
+        {
             "src": "https://www.coolapk.com/link\\?url=http(s?)%3A%2F%2F",
             "kind": "wildcard",
             "dst": "http$1://",
             "enable": true
-          },
-          {
-            "src": "^https://link.jianshu.com/\\?t=http(s?)%3A%2F%2F",
+        },
+        {
+            "src": "https://link.jianshu.com/\\?t=http(s?)%3A%2F%2F",
             "kind": "wildcard",
             "dst": "http$1://",
             "enable": true
-          },
-          {
-            "src": "^https://links.jianshu.com/go\\?to=http(s?)%3A%2F%2F",
+        },
+        {
+            "src": "https://links.jianshu.com/go\\?to=http(s?)%3A%2F%2F",
             "kind": "wildcard",
             "dst": "http$1://",
             "enable": true
-          },
-          {
-            "src": "^https?://www.360doc.(cn|com)/outlink.html\\?url=http(s?)",
+        },
+        {
+            "src": "https?://www.360doc.(cn|com)/outlink.html\\?url=http(s?)",
             "kind": "wildcard",
             "dst": "http",
             "enable": true
-          },
-          {
-            "src": "^https//www.deviantart.com/users/outgoing\\?http(s?)",
+        },
+        {
+            "src": "https//www.deviantart.com/users/outgoing\\?http(s?)",
             "kind": "wildcard",
             "dst": "http$1",
             "enable": true
-          },
-          {
-            "src": "^https://www.youtube.com/redirect\\?event=*&redir_token=*&q=http(s?)\\?%3A%2F%2F",
+        },
+        {
+            "src": "https://www.youtube.com/redirect\\?event=*&redir_token=*&q=http(s?)\\?%3A%2F%2F",
             "kind": "wildcard",
             "dst": "http$1://",
             "enable": true
-          },
-          {
+        },
+        {
             "src": "https://link.juejin.cn/?target=http(s?)%3A%2F%2F?",
             "kind": "wildcard",
             "dst": "http$1://"
-          },
-          {
+        },
+        {
             "src": "https://ref.gamer.com.tw/redir.php\\?url=http(s?)%3A%2F%2F",
             "kind": "wildcard",
             "dst": "http$1://",
             "enable": true
-          },
-          {
+        },
+        {
             "src": "https?:\/\/bbs\\.[a-zA-Z]{3,4}\\.edu\\.cn\/v\\d\/jump-to\\.php\\?url=http(s?):\/\/",
             "kind": "regexp",
             "dst": "http$1://",
             "enable": true
-          },
-          {
+        },
+        {
             "src": "^https:\/\/link\\..*\\..*/\\?target=http(s?)(?:%3A|:)(?:%2F%2F|\/\/)",
             "kind": "regexp",
             "dst": "http$1://",
             "enable": true
-          },
-          {
+        },
+        {
             "src": "https:\/\/outgoing\\.prod\\.mozaws\\.net\/v\\d\/[^\/]*\/http(s?)%3A",
             "kind": "regexp",
             "dst": "http$1:",
             "enable": true
-          },
-          {
+        },
+        {
             "src": "https:\/\/prod\\.outgoing\\.prod\\.webservices\\.mozgcp\\.net\/v\\d\/[^\/]*\/http(s?)%3A",
             "kind": "regexp",
             "dst": "http$1:",
             "enable": true
-          }
+        }
 
     ]
 }

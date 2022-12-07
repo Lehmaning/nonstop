@@ -6,7 +6,7 @@
             "dst": "$1$2",
             "enable": true
         },
-		{
+        {
             "src": "(\\??)&?(?:utm_source|utm_id|utm_content|utm_content|utm_medium)=[^&/]*(/?)",
             "kind": "regexp",
             "dst": "$1$2",
