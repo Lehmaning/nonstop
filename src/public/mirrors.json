@@ -49,10 +49,10 @@
             "enable": true
         },
         {
-            "src": "google.com/recaptcha",
+            "src": "google.com/recaptcha/api",
             "kind": "wildcard",
-            "dst": "recaptcha.net/recaptcha",
-            "enable": false
+            "dst": "recaptcha.net/recaptcha/api",
+            "enable": true
         },
         {
             "src": "google.com/chrome/?$",
