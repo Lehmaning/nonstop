@@ -24,7 +24,7 @@ function updateThinRule(input, output=[]) {
     let data = JSON.parse(input);
     for(let rule of Object.keys(data)) {
         output[rule].push.apply(output[rule], data[rule].filter(item => {return item.enable == true}));
-        console.log(data[rule].filter(item => {return item.enable == true}));
+        //console.log(data[rule].filter(item => {return item.enable == true}));
     }
     return output;
 }
