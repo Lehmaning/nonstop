@@ -43,7 +43,7 @@ utils/merge
 ### 测试工具
 你可以用如下命令对指定 URL 进行测试：
 ```shell
-bin/sandbox <desktop/mobile> <source URL>
+utils/sandbox <desktop/mobile> <source URL>
 ```
 
 ## 其它同类型扩展以及规则
