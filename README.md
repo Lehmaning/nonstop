@@ -37,7 +37,7 @@ Gooreplacer 规则，请搭配浏览器插件 [Gooreplacer](https://github.com/j
 ```shell
 git clone https://github.com/Lehmaning/nonstop.git
 cd nonstop
-bin/merge
+utils/merge
 ```
 
 ### 测试工具
