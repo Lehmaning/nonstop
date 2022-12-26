@@ -1,0 +1,46 @@
+{
+    "redirect-rules": [
+        {
+            "src":    "//*.youtube.com",
+            "kind":   "wildcard",
+            "dst":    "//invidious.snopyta.org",
+            "enable": false
+        },
+        {
+            "src":    "//twitter.com",
+            "kind":   "wildcard",
+            "dst":    "//nitter.net",
+            "enable": false
+        },
+        {
+            "src":    "//www.reddit.com",
+            "kind":   "wildcard",
+            "dst":    "//libreddit.spike.codes",
+            "enable": false
+        },
+        {
+            "src":    "//www.instagram.com",
+            "kind":   "wildcard",
+            "dst":    "//bibliogram.1d4.us",
+            "enable": false
+        },
+        {
+            "src":    "//tiktok.com",
+            "kind":   "wildcard",
+            "dst":    "//proxitok.pabloferreiro.es",
+            "enable": false
+        },
+        {
+            "src":    "//i.imgur.com",
+            "kind":   "wildcard",
+            "dst":    "//rimgo.vern.cc",
+            "enable": false
+        },
+        {
+            "src":    "//medium.com",
+            "kind":   "wildcard",
+            "dst":    "//scribe.rip",
+            "enable": false
+        }
+    ]
+}

@@ -59,14 +59,7 @@
             "kind":   "wildcard",
             "dst":    "//m.cnbeta.com.tw/view/",
             "enable": true
-        },
-        {
-            "src":    "cnbeta.com",
-            "kind":   "wildcard",
-            "dst":    "cnbeta.com.tw",
-            "enable": true
         }
-
     ],
     "cancel-rules": []
 }
