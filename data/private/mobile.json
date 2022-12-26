@@ -39,13 +39,13 @@
         {
             "src":    "*.bilibili.com/read/cv",
             "kind":   "wildcard",
-            "dst":    "bilibili.com/mobile?id=",
+            "dst":    "bilibili.com/read/mobile?id=",
             "enable": true
         },
         {
             "src":    "https?://d.bilibili.com/download_app.html\\?preUrl=https?%3A%2F%2Fwww.bilibili.com%2Fread%2Fmobile%2F",
             "kind":   "wildcard",
-            "dst":    "https://bilibili.com/mobile?id=",
+            "dst":    "https://bilibili.com/read/mobile?id=",
             "enable": true
         },
         {
