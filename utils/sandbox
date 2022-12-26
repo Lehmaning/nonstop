@@ -7,7 +7,7 @@ Usage: sandbox desktop/mobile sourceURL
 }
 let fs = require("fs");
 let path = require("path");
-let ruleName = process.argv.slice(2)[0] + ".json";
+let ruleName = process.argv.slice(2)[0] + ".thin.json";
 let ruleLocation = path.resolve(__dirname + "/../" + ruleName)
 let ruleFile = fs.readFileSync(ruleLocation).toString();
 let data = JSON.parse(ruleFile);

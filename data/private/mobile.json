@@ -43,15 +43,15 @@
             "enable": true
         },
         {
-            "src":    "https?://d.bilibili.com/download_app.html\\?preUrl=https?%3A%2F%2Fwww.bilibili.com%2Fread%2Fmobile%2F",
+            "src":    "https?://d.bilibili.com/download_app.html\\?preUrl=https?%3A%2F%2Fwww.bilibili.com%2Fread%2Fmobile%2F(\\d+)*",
             "kind":   "wildcard",
-            "dst":    "https://bilibili.com/read/mobile?id=",
+            "dst":    "https://bilibili.com/read/mobile?id=$1",
             "enable": true
         },
         {
-            "src":    "https?://d.bilibili.com/download_app.html\\?preUrl=https?%3A%2F%2Fwww.bilibili.com%2Fvideo%2F",
-            "kind":   "wildcard",
-            "dst":    "https://bilibili.com/video/",
+            "src":    "https?:\/\/d\\.bilibili\\.com\/download_app\\.html\\?preUrl=https?%3A%2F%2Fwww\\.bilibili\\.com%2Fvideo%2F(av[0-9]+|BV[0-9a-zA-Z]+).*",
+            "kind":   "regexp",
+            "dst":    "https://bilibili.com/video/$1",
             "enable": true
         },
         {
