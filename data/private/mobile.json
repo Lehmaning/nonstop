@@ -49,7 +49,7 @@
             "enable": true
         },
         {
-            "src":    "https?:\/\/d\\.bilibili\\.com\/download_app\\.html\\?preUrl=https?%3A%2F%2Fwww\\.bilibili\\.com%2Fvideo%2F(av[0-9]+|BV[0-9a-zA-Z]+).*",
+            "src":    "https?:\/\/d\\.bilibili\\.com\/download_app\\.html\\?preUrl=https?%3A%2F%2F(?:www|m)\\.bilibili\\.com%2Fvideo%2F(av[0-9]+|BV[0-9a-zA-Z]+)(?:\\.html)?.*",
             "kind":   "regexp",
             "dst":    "https://bilibili.com/video/$1",
             "enable": true
