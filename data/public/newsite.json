@@ -13,9 +13,9 @@
             "enable": true
         },
         {
-            "src":    "cnbeta.com",
+            "src":    "cnbeta.com/",
             "kind":   "wildcard",
-            "dst":    "cnbeta.com.tw",
+            "dst":    "cnbeta.com.tw/",
             "enable": true
         }
     ]
