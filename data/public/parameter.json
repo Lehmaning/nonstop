@@ -1,13 +1,13 @@
 {
     "redirect-rules": [
         {
-            "src": "(\\??)&?(?:spm_id_from|spm|share_from|share_source|bbid|ts|timestamp|unique_k|share_session_id|share_plat|share_tag|vd_source)=[^&/]*(/?)",
+            "src": "(\\??)(\\?|&)(?:spm_id_from|spm|share_from|share_source|bbid|ts|timestamp|unique_k|share_session_id|share_plat|share_tag|vd_source)==[^&/]*&?(/?)",
             "kind": "regexp",
             "dst": "$1$2",
             "enable": true
         },
         {
-            "src": "(\\??)&?(?:utm_source|utm_id|utm_content|utm_content|utm_medium)=[^&/]*(/?)",
+            "src": "(\\??)(\\?|&)(?:depth_\\d+-)?(?:utm_source|utm_id|utm_content|utm_medium)=[^&/]*&?(/?)",
             "kind": "regexp",
             "dst": "$1$2",
             "enable": true
