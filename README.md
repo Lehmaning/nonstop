@@ -12,8 +12,6 @@ Gooreplacer 规则，请搭配浏览器插件 [Gooreplacer](https://github.com/j
 
 大部分规则因为会导致网站出错已经默认禁用，需要启用的话可以手动将规则下载到本地，然后在 Gooreplacer 配置页面中导入并启用即可。
 
-
-
 ## 如何使用？
 ### 在线规则
 1. 安装浏览器插件 [Gooreplacer](https://github.com/jiacai2050/gooreplacer)
@@ -45,6 +43,11 @@ utils/merge
 ```shell
 utils/sandbox <desktop/mobile> <source URL>
 ```
+
+## 注意事项
+* 由于 Gooreplacer 的规则为增量同步，如果因为使用了本在线规则导致网站出现问题可以尝试清空规则然后再同步，本地导入同理。
+* 使用本规则可能会因为插件反复清理链接参数导致网站（如必应、知乎等）访问超时，刷新可以解决问题。
+* 重定向 recaptcha 也可能导致 Google 官方网站登录时出现错误提示，如果有发现同样的问题请提交 issue 以便进一步优化规则。
 
 ## 其它同类型扩展以及规则
 * [keqingrong/static-files-host](https://github.com/keqingrong/static-files-host)<br/>重定向谷歌静态资源及部分网站到官方镜像的 Gooreplacer 规则。
