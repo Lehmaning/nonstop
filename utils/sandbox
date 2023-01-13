@@ -32,7 +32,6 @@ function test(input) {
         console.log("Matched", rule["kind"], "rule:\n", rule["src"].toString(), "->", dstURL);
         /* console.log("\n" + srcURL.toString(), "->", dstURL); */
         console.log("The result URL is:", resultURL);
-	return true;
     }
     console.log("No rule matched!");
 }
