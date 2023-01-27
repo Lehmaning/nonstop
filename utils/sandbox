@@ -24,6 +24,7 @@ function* getRule(data){
 
 function test(input) {
     let resultURL = input, beforeURL;
+    let matched = false
     for(let rule of getRule(data)) {
         let srcURL = new RegExp(rule["kind"] == "wildcard" 
             ? rule["src"].replace("\.", "\\.").replace("*", ".*").replace("/", "\\/")
@@ -35,8 +36,9 @@ function test(input) {
         console.log("Matched", rule["kind"], "rule:\n", rule["src"].toString(), "->", dstURL);
         /* console.log("\n" + srcURL.toString(), "->", dstURL); */
         console.log("The result URL is:", resultURL);
+        matched = true
     }
-    console.log("No rule matched!");
+    if(!matched) console.log("No rule matched!");
 }
 
 test(testURL);
