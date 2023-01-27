@@ -1,17 +1,20 @@
 #!/usr/bin/env -S node
-if(process.argv.slice(2)[0] in {"-h":"", "--help":"", "help":""}) {
+let fs = require("fs");
+let path = require("path");
+
+let args = process.argv.slice(2)
+if(args[0] in {"-h":"", "--help":"", "help":""}) {
     console.log(`
 Usage: sandbox desktop/mobile sourceURL
     `)
     process.exit()
 }
-let fs = require("fs");
-let path = require("path");
-let ruleName = process.argv.slice(2)[0] + ".thin.json";
+
+let ruleName = args[0] + ".thin.json";
 let ruleLocation = path.resolve(__dirname + "/../" + ruleName)
 let ruleFile = fs.readFileSync(ruleLocation).toString();
 let data = JSON.parse(ruleFile);
-let testURL = process.argv.slice(2)[1];
+let testURL = args[1];
 
 function* getRule(data){
     for(let r of data["redirect-rules"]) {
@@ -35,4 +38,5 @@ function test(input) {
     }
     console.log("No rule matched!");
 }
+
 test(testURL);
