@@ -1,4 +1,9 @@
 #!/usr/bin/env -S node
+/**
+ * @file A sandbox which is only for testing redirect rules.
+ * @author Lehmaning <60032845+Lehmaning@users.noreply.github.com>
+ * @license MIT
+ */
 let fs = require("fs");
 let path = require("path");
 
@@ -16,12 +21,21 @@ let ruleFile = fs.readFileSync(ruleLocation).toString();
 let data = JSON.parse(ruleFile);
 let testURL = args[1];
 
+/**
+ * Read every redirect rules.
+ * @yields {string} Every element from redirect rules.
+ */
 function* getRule(data){
     for(let r of data["redirect-rules"]) {
         yield r;
     }
 }
 
+/**
+ * Iterate every rules then output if matched.
+ * @function test
+ * @param {string} input The econd param from stdi, a URL pattern.
+ */
 function test(input) {
     let resultURL = input, beforeURL;
     let matched = false

@@ -1,13 +1,27 @@
 #!/usr/bin/env -S node
+/**
+ * @file .A script to combine from splitted rule files to a importable json file.
+ * @author Lehmaning <60032845+Lehmaning@users.noreply.github.com>
+ * @license MIT
+ */
 let fs = require('fs');
 let path = require('path');
 
 let srcLocation = path.resolve(__dirname + '/../data')
 let pubRuleLocation = srcLocation + '/public/';
 let priRuleLocation = srcLocation + '/private/';
+
+/**
+ * @function destFilesLocation
+ * @param {string} file The output file location.
+ */
 let destFilesLocation = file => path.resolve(__dirname + `/../${file}`);
 //let buildFilesLocation = file => path.resolve(__dirname + `/../build/${file}`)
 
+/**
+ * Read every redirect rules.
+ * @yields {string} Every element from rule files.
+ */
 function* ruleFileRead(location) {
     var ruleFilesList = fs.readdirSync(location);
     for(let i of ruleFilesList) {
