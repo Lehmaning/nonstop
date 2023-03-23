@@ -91,7 +91,7 @@
             "enable": false
         },
         {
-            "src": "tensorflow.org",
+            "src": "www.tensorflow.org",
             "kind": "wildcard",
             "dst": "tensorflow.google.cn",
             "enable": true
