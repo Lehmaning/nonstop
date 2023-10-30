@@ -39,7 +39,7 @@
         {
             "src": "//b23.tv",
             "kind": "wildcard",
-            "dst": "//b23.wtf",
+            "dst": "//b23.icu",
             "enable": true
         },
         {
