@@ -22,31 +22,31 @@
             "src": ".*\\.gravatar\\.com\/avatar",
             "kind": "regexp",
             "dst": "https://sdn.geekzu.org/avatar",
-            "enable": true
+            "enable": false
         },
         {
             "src": "fonts.gstatic.com",
             "kind": "wildcard",
             "dst": "gapis.geekzu.org/g-fonts",
-            "enable": true
+            "enable": false
         },
         {
             "src": "themes.googleusercontent.com",
             "kind": "wildcard",
             "dst": "gapis.geekzu.org/g-themes",
-            "enable": true
+            "enable": false
         },
         {
             "src": "ajax.googleapis.com",
             "kind": "wildcard",
             "dst": "gapis.geekzu.org/ajax",
-            "enable": true
+            "enable": false
         },
         {
             "src": "fonts.googleapis.com",
             "kind": "wildcard",
             "dst": "fonts.geekzu.org",
-            "enable": true
+            "enable": false
         },
         {
             "src": "google.com/recaptcha/api",
