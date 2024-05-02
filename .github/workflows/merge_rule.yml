@@ -1,5 +1,8 @@
 name: merge rule
-on: push
+on:
+  push:
+    paths:
+      - 'data/**'
 jobs:
   merge_rule:
       runs-on: ubuntu-latest
