@@ -1,15 +1,15 @@
 {
     "redirect-rules": [
         {
-            "src": "issuehint.com/repo/",
-            "kind": "wildcard",
-            "dst": "github.com/",
+            "src": "issuehint.com/issue/([^\\d]*)/",
+            "kind": "regexp",
+            "dst": "github.com/$1/issues/",
             "enable": true
         },
         {
-            "src": "issuehint.com/issue/([^\\d]*)/",
-            "kind": "regexp",
-            "dst": "github.com/$1/issues",
+            "src": "issuehint.com/repo/",
+            "kind": "wildcard",
+            "dst": "github.com/",
             "enable": true
         },
         {
