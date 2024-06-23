@@ -1,6 +1,8 @@
 name: merge rule
 on:
   push:
+    branches:
+      - master
     paths:
       - 'data/**'
 jobs:
@@ -19,7 +21,7 @@ jobs:
             files: desktop.json, mobile.json, desktop.thin.json, mobile.thin.json
         - uses: stefanzweifel/git-auto-commit-action@v5
           with:
-            commit_message: "chore(rules): auto export rules"
+            commit_message: "chore(rules): export rules automatically"
             # commit_user_name: "github-actions[bot]"
             # commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"
             # commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
