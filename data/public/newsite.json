@@ -13,10 +13,10 @@
             "enable": true
         },
         {
-            "src": "cnbeta.com/",
+            "src": "//cnbeta.com",
             "kind": "wildcard",
-            "dst": "cnbeta.com.tw/",
-            "enable": false
+            "dst": "//cnbeta.com.tw",
+            "enable": true
         }
     ]
 }
