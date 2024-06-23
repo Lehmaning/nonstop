@@ -67,15 +67,21 @@
             "enable": true
         },
         {
-            "src": "https?:\/\/www\\.it-swarm\\.cn\/.*\/.*\/(\\d+)\/",
+            "src": "https?\/\/www\\.it-swarm\\.cn\/.*\/.*\/(\\d+)\/",
             "kind": "regexp",
             "dst": "https://stackoverflow.com/questions/$1",
             "enable": true
         },
         {
-            "src": "//www.codenong.com",
+            "src": "https?://www.codenong.com/tag",
             "kind": "wildcard",
-            "dst": "//stackoverflow.com",
+            "dst": "https://stackoverflow.com/tag",
+            "enable": true
+        },
+        {
+            "src": "https?:\/\/www\\.codenong\\.com\/(\d+)",
+            "kind": "regex",
+            "dst": "https://stackoverflow.com/question/$1",
             "enable": true
         }
     ]
