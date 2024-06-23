@@ -71,6 +71,12 @@
             "kind": "regexp",
             "dst": "https://stackoverflow.com/questions/$1",
             "enable": true
+        },
+        {
+            "src": "//www.codenong.com",
+            "kind": "wildcard",
+            "dst": "//stackoverflow.com",
+            "enable": true
         }
     ]
 }
