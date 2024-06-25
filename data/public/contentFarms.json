@@ -79,7 +79,7 @@
             "enable": true
         },
         {
-            "src": "https?:\/\/www\\.codenong\\.com\/(\d+)",
+            "src": "https?:\/\/www\\.codenong\\.com\/(\\d+)",
             "kind": "regex",
             "dst": "https://stackoverflow.com/question/$1",
             "enable": true
