@@ -1,6 +1,12 @@
 {
     "redirect-rules": [
         {
+            "src": "gitcode.net",
+            "kind": "wildcard",
+            "dst": "github.com",
+            "enable": true
+        },
+        {
             "src": "gitcode.com",
             "kind": "wildcard",
             "dst": "github.com",
