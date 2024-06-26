@@ -3,7 +3,8 @@
 Gooreplacer 规则，请搭配浏览器插件 [Gooreplacer](https://github.com/jiacai2050/gooreplacer) 使用。目前通过重定向可实现的功能有：
 
 * 部分被墙网站改用墙内官方镜像。
-* 部分静态资源改用第三方 CDN 加速。
+* 重定向部分信息采集站、爬虫网站至源站，如GitCode。
+* 部分静态资源改用 CDN 加速。
 * 移除部分链接跟踪参数，如 ```utm```、```share```、```spm```等。
 * 部分网站强制使用桌面端或移动端。
 * Bilibili、Niconico 以及 YouTube 短链接直接跳转到原地址，并移除跟踪参数。
