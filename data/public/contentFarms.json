@@ -1,6 +1,12 @@
 {
     "redirect-rules": [
         {
+            "src": "gitcode.com",
+            "kind": "wildcard",
+            "dst": "github.com",
+            "enable": true
+        },
+        {
             "src": "issuehint.com/issue/([^\\d]*)/",
             "kind": "regexp",
             "dst": "github.com/$1/issues/",
